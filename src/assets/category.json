@@ -1,0 +1,13 @@
+{
+  "categories":
+  [
+    {
+      "name":"productCategory","image":"https://www.echollywell.co.uk/wp-content/uploads/blank-00cc00_040004000.png","description":"Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups."
+    }
+    ,
+    {
+      "name":"productCategory2","image":"https://www.echollywell.co.uk/wp-content/uploads/blank-00cc00_040004000.png","description":"Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups."
+    }
+    
+  ]
+}

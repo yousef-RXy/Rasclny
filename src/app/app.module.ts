@@ -4,10 +4,17 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
+import { ProductsComponent } from './pages/products/products.component';
+import { HttpClientModule } from '@angular/common/http';
+import { CardComponent } from './pages/products/card/card.component';
+import { ButtonComponent } from './pages/button/button.component';
+import { CategoryComponent } from './pages/category/category.component';
+import { CategoryitemComponent } from './pages/category/categoryitem/categoryitem.component';
+
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent],
-  imports: [BrowserModule, AppRoutingModule],
+  declarations: [AppComponent, HomeComponent, ProductsComponent, CardComponent, ButtonComponent, CategoryComponent,  CategoryitemComponent],
+  imports: [BrowserModule, AppRoutingModule,HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })
