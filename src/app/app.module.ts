@@ -11,10 +11,11 @@ import { ButtonComponent } from './pages/button/button.component';
 import { CategoryComponent } from './pages/category/category.component';
 import { CategoryitemComponent } from './pages/category/categoryitem/categoryitem.component';
 import { InputComponent } from './component/input/input.component';
+import { HomeTopComponent } from './component/home-top/home-top.component';
 
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, ProductsComponent, CardComponent, ButtonComponent, CategoryComponent,  CategoryitemComponent, InputComponent],
+  declarations: [AppComponent, HomeComponent, ProductsComponent, CardComponent, ButtonComponent, CategoryComponent,  CategoryitemComponent, InputComponent, HomeTopComponent],
   imports: [BrowserModule, AppRoutingModule,HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
