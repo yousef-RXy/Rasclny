@@ -12,10 +12,18 @@ import { CategoryComponent } from './pages/category/category.component';
 import { CategoryitemComponent } from './pages/category/categoryitem/categoryitem.component';
 import { InputComponent } from './component/input/input.component';
 
-
 @NgModule({
-  declarations: [AppComponent, HomeComponent, ProductsComponent, CardComponent, ButtonComponent, CategoryComponent,  CategoryitemComponent, InputComponent],
-  imports: [BrowserModule, AppRoutingModule,HttpClientModule],
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    ProductsComponent,
+    CardComponent,
+    ButtonComponent,
+    CategoryComponent,
+    CategoryitemComponent,
+    InputComponent,
+  ],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })
