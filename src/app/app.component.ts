@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Component } from '@angular/core';
+import { AuthService } from './services/auth.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -8,12 +8,5 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class AppComponent {
   title = 'Depi-GradProject';
 
-  constructor(private route: ActivatedRoute, private router: Router) {}
-
-  ngOnInit() {
-    const token = localStorage.getItem('token');
-    if (!token) {
-      this.router.navigate(['auth/login']);
-    }
-  }
+  constructor(private authService: AuthService) {}
 }
