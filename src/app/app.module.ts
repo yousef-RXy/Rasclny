@@ -11,6 +11,7 @@ import { ButtonComponent } from './pages/button/button.component';
 import { CategoryComponent } from './pages/category/category.component';
 import { CategoryitemComponent } from './pages/category/categoryitem/categoryitem.component';
 import { InputComponent } from './component/input/input.component';
+import { HomeTopComponent } from './component/home-top/home-top.component';
 
 @NgModule({
   declarations: [
