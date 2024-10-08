@@ -1,17 +1,19 @@
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ProductsComponent } from './pages/products/products.component';
-import { HttpClientModule } from '@angular/common/http';
 import { CardComponent } from './pages/products/card/card.component';
 import { CategoryComponent } from './pages/category/category.component';
 import { CategoryitemComponent } from './pages/category/categoryitem/categoryitem.component';
 import { ButtonComponent } from './components/button/button.component';
 import { InputComponent } from './components/input/input.component';
 import { HomeTopComponent } from './components/home-top/home-top.component';
+import { AuthComponent } from './pages/auth/auth.component';
 
 @NgModule({
   declarations: [
@@ -24,8 +26,14 @@ import { HomeTopComponent } from './components/home-top/home-top.component';
     CategoryitemComponent,
     InputComponent,
     HomeTopComponent,
+    AuthComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
