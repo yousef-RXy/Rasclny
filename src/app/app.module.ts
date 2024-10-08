@@ -7,11 +7,11 @@ import { HomeComponent } from './pages/home/home.component';
 import { ProductsComponent } from './pages/products/products.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CardComponent } from './pages/products/card/card.component';
-import { ButtonComponent } from './pages/button/button.component';
 import { CategoryComponent } from './pages/category/category.component';
 import { CategoryitemComponent } from './pages/category/categoryitem/categoryitem.component';
-import { InputComponent } from './component/input/input.component';
-import { HomeTopComponent } from './component/home-top/home-top.component';
+import { ButtonComponent } from './components/button/button.component';
+import { InputComponent } from './components/input/input.component';
+import { HomeTopComponent } from './components/home-top/home-top.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +23,7 @@ import { HomeTopComponent } from './component/home-top/home-top.component';
     CategoryComponent,
     CategoryitemComponent,
     InputComponent,
+    HomeTopComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
