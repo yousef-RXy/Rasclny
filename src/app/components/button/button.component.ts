@@ -7,8 +7,8 @@ import { Component, Input } from '@angular/core';
 })
 export class ButtonComponent {
   @Input() text?: string;
-  @Input() type?: string;
-  @Input() color?: any;
-  @Input() backGroundColor?: any;
-  @Input() disabled?: boolean;
+  @Input() type: 'button' | 'submit' | 'reset' = 'button';
+  @Input() color?: string;
+  @Input() backGroundColor?: string;
+  @Input() disabled?: boolean = false;
 }

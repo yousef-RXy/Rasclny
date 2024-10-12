@@ -13,6 +13,9 @@ import { ButtonComponent } from './components/button/button.component';
 import { InputComponent } from './components/input/input.component';
 import { HomeTopComponent } from './components/home-top/home-top.component';
 import { AuthComponent } from './pages/auth/auth.component';
+import { FooterComponent } from './component/footer/footer.component';
+import { InfoComponent } from './components/info/info.component';
+
 
 @NgModule({
   declarations: [
@@ -20,11 +23,13 @@ import { AuthComponent } from './pages/auth/auth.component';
     HomeComponent,
     ProductsComponent,
     CardComponent,
-    ButtonComponent,
     CategoryComponent,
     InputComponent,
     HomeTopComponent,
     AuthComponent,
+    ButtonComponent,
+    FooterComponent,
+    InfoComponent,
   ],
   imports: [
     BrowserModule,
