@@ -1,0 +1,83 @@
+<div class="container">
+  <div class="img">
+    <img src="assets/auth.png" alt="auth image" />
+  </div>
+  <div class="form">
+    <form [formGroup]="applyForm" (submit)="submitHandler()">
+      <span *ngIf="errors">
+        {{ errors.message }}
+      </span>
+      <div *ngIf="mode === 'signup'" class="form-control">
+        <app-input name="name" type="name" default="Enter your name" />
+        <div *ngIf="isValid('name')">
+          <span *ngIf="applyForm.controls['name'].errors?.['required']">
+            Name is required
+          </span>
+          <span *ngIf="applyForm.controls['name'].errors?.['minlength']">
+            Name must be at least 3 characters
+          </span>
+        </div>
+      </div>
+      <div class="form-control">
+        <app-input name="email" type="email" default="name@email.com" />
+        <!-- <div *ngIf="isValid('email')"> -->
+        <div
+          *ngIf="
+            applyForm.controls['email'].invalid &&
+            (isFormSubmitted ||
+              applyForm.controls['email'].touched ||
+              applyForm.controls['email'].dirty)
+          "
+        >
+          <span *ngIf="applyForm.controls['email'].errors?.['required']">
+            email is required
+          </span>
+          <span *ngIf="applyForm.controls['email'].errors?.['email']">
+            email must be a valid email
+          </span>
+        </div>
+      </div>
+      <div class="form-control">
+        <app-input
+          name="password"
+          type="password"
+          default="Enter your password"
+        />
+        <div *ngIf="isValid('password')">
+          <span *ngIf="applyForm.controls['password'].errors?.['required']">
+            password is required
+          </span>
+          <span *ngIf="applyForm.controls['password'].errors?.['minlength']">
+            password must be at least 6 characters
+          </span>
+        </div>
+      </div>
+
+      <app-button
+        [disabled]="disabled"
+        color="white"
+        backGroundColor="rgba(89, 160, 83, 1)"
+        text="Sign In"
+        type="submit"
+      ></app-button>
+      <p
+        class="navigation"
+        *ngIf="mode === 'signup'"
+        (click)="navigateTo('login')"
+        style="cursor: pointer"
+      >
+        Already have an account?
+        <span style="color: #66ad5f; text-decoration: underline">LogIn</span>
+      </p>
+      <p
+        class="navigation"
+        *ngIf="mode === 'login'"
+        (click)="navigateTo('signup')"
+        style="cursor: pointer"
+      >
+        Don't have an account?
+        <span style="color: #66ad5f; text-decoration: underline">Sign Up</span>
+      </p>
+    </form>
+  </div>
+</div>

@@ -1,9 +1,14 @@
 <div class="card">
-    <img [src]="category?.image" alt="">
-    <div class="txt">
-        <p class="name">{{category?.name}}</p>
-        <p class="category">{{category?.description}}</p>
-    </div>
-    <a  class="categoryLink" [routerLink]="['/products', category?.name]"><app-button [color]="'white'" [backGroundColor]="'rgba(89, 160, 83, 1)'" [text]="'more details'"></app-button></a>
-   
+  <img [src]="category?.image" alt="" />
+  <div class="txt">
+    <p class="name">{{ category?.name }}</p>
+    <p class="category">{{ category?.description }}</p>
+  </div>
+  <a class="categoryLink" [routerLink]="['/products', category?.name]"
+    ><app-button
+      [color]="'white'"
+      [backGroundColor]="'rgba(89, 160, 83, 1)'"
+      [text]="'more details'"
+    ></app-button
+  ></a>
 </div>
