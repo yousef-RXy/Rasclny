@@ -1,5 +1,8 @@
-
-<button  [ngStyle]="{'background-color':backGroundColor,'color':color}">
+<button
+  [type]="type"
+  [disabled]="disabled"
+  [ngStyle]="{ 'background-color': backGroundColor, color: color }"
+>
   <div class="svg-wrapper-1">
     <div class="svg-wrapper">
       <svg
@@ -16,5 +19,5 @@
       </svg>
     </div>
   </div>
-  <span>{{text}}</span>
+  <span>{{ text }}</span>
 </button>
