@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from '../../services/data-service.service';
-import { productData } from '../../types/dataType';
 import { ActivatedRoute } from '@angular/router';
+import { singleCategoryService } from '../../services/singleCategory.service';
 
 @Component({
   selector: 'app-products',
@@ -10,26 +9,23 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ProductsComponent implements OnInit {
   category: string | null = '';
-  products?: productData[];
-  filteredProducts?: productData[];
+  singleCategory: any;
 
   constructor(
-    private dataService: DataService,
+    private singleCategoryData: singleCategoryService,
     private route: ActivatedRoute
   ) {}
 
   ngOnInit(): void {
     this.category = this.route.snapshot.paramMap.get('category');
     console.log('Category from URL:', this.category);
-    this.dataService.getProducts().subscribe(data => {
-      this.products = data.products;
 
-      if (this.category) {
-        this.filteredProducts = this.products?.filter(
-          product => product.category === this.category
-        );
-        console.log(this.filteredProducts);
-      }
+    this.singleCategoryData.getData(this.category).subscribe(response => {
+      this.singleCategory = response;
+      
+      console.log(this.singleCategory?.category.products)
     });
+  
+    
   }
 }

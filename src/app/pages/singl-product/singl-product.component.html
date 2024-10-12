@@ -1,0 +1,33 @@
+
+
+<div class="p-content">
+    <div class="img-p">
+        <img [src]="singleProductData?.products?.image" alt="">
+    </div>
+    
+    <div class="data">
+        <div class="name">
+            <p>
+                {{singleProductData?.products?.name}}
+            </p>
+        </div>
+        <div class="description">
+            <p class="disciption">
+                {{singleProductData?.products?.description}}
+            </p>
+        </div>
+        <div class="price">
+
+            <p>
+                <span>price</span> 
+                {{singleProductData?.products?.price}} Pound
+            </p>
+        </div>
+        <app-button [color]="'white'" [backGroundColor]="'rgba(89, 160, 83, 1)'" [text]="'request'"></app-button>
+    </div>
+
+   
+
+
+
+

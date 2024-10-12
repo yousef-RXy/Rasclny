@@ -10,6 +10,6 @@ export interface products {
     products: products[];
     name: string;
     url: string;
-    category: string;  // Ensure the 'category' field is defined
+    category: string; 
     price: string;
   }

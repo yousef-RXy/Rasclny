@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CategoryDataService } from '../../services/category-data.service';
+import { ApiService } from '../../services/api.service';
 
 @Component({
   selector: 'app-category',
@@ -7,12 +7,12 @@ import { CategoryDataService } from '../../services/category-data.service';
   styleUrls: ['./category.component.css'],
 })
 export class CategoryComponent implements OnInit {
-  constructor(private categoryService: CategoryDataService) {}
-  categories?: any;
+  data?: any;
+  constructor(private apiService: ApiService) {}
   ngOnInit(): void {
-    this.categoryService.getCategories().subscribe(data => {
-      this.categories = data.categories;
-      console.log(this.categories);
+    this.apiService.getData().subscribe(response => {
+      this.data = response;
     });
   }
+  
 }

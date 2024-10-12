@@ -1,6 +1,25 @@
 <div class="content">
-    <div class="cards">
-        <app-categoryitem *ngFor="let category of categories" [category]="category"></app-categoryitem>
 
+
+    <div *ngFor="let category of data?.categories">
+    
+    <div class="card">
+    
+      <div class="txt">
+    
+        <p>
+          {{category?.name}}
+        </p>
+      </div>
+      <a class="categoryLink" [routerLink]="['/products', category?._id]"
+        ><app-button
+          [color]="'white'"
+          [backGroundColor]="'rgba(89, 160, 83, 1)'"
+          [text]="'more details'"
+        ></app-button
+      ></a>
     </div>
-</div>
+    
+    
+    </div>
+    </div>
