@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
+// import {HomeTopComponent} from './component/home-top/home-top.component'
 import { AuthService } from './services/auth.service';
+import { FooterComponent } from './component/footer/footer.component'
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',

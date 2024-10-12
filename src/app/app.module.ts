@@ -13,8 +13,6 @@ import { ButtonComponent } from './components/button/button.component';
 import { InputComponent } from './components/input/input.component';
 import { HomeTopComponent } from './components/home-top/home-top.component';
 import { AuthComponent } from './pages/auth/auth.component';
-import { SinglProductComponent } from './pages/singl-product/singl-product.component';
-import { InfoComponent } from './components/info/info.component';
 
 @NgModule({
   declarations: [
@@ -27,8 +25,6 @@ import { InfoComponent } from './components/info/info.component';
     InputComponent,
     HomeTopComponent,
     AuthComponent,
-    SinglProductComponent,
-    InfoComponent,
   ],
   imports: [
     BrowserModule,
