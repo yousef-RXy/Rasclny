@@ -14,6 +14,8 @@ import { ButtonComponent } from './components/button/button.component';
 import { InputComponent } from './components/input/input.component';
 import { HomeTopComponent } from './components/home-top/home-top.component';
 import { AuthComponent } from './pages/auth/auth.component';
+import { FooterComponent } from './component/footer/footer.component';
+
 
 @NgModule({
   declarations: [
@@ -27,6 +29,7 @@ import { AuthComponent } from './pages/auth/auth.component';
     InputComponent,
     HomeTopComponent,
     AuthComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
