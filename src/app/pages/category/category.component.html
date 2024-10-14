@@ -4,10 +4,10 @@
     <div *ngFor="let category of data?.categories">
     
     <div class="card">
-    
+    <img [src]="category?.imgurl"  alt="{{category?.name}}">
       <div class="txt">
     
-        <p>
+        <p class="cat-name">
           {{category?.name}}
         </p>
       </div>

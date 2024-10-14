@@ -144,3 +144,7 @@ footer {
         height: 200px; /* Let image scale proportionally */
     }
 }
+li a{
+    text-decoration: none;
+    color: black;
+}

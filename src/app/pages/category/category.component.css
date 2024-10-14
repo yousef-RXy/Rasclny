@@ -1,4 +1,5 @@
 .cards{
+    
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -15,10 +16,11 @@
     padding: 100px;
     gap: 10px;
     flex-wrap: wrap;
+    width: 100%;
 }
 .card{
-    width: 250px;
-    height: 300px;
+    width: 400px;
+    height: 500px;
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -33,13 +35,18 @@
 }
 
 .card img{
-    width:340px;
+    width:380px;
     border-radius: 20px;
     object-fit: cover;
 }
 .name{
     color: rgba(0, 0, 0, 1);
     font-size: 30px;
+
+}
+.cat-name{
+    font-size: 30px;
+    font-weight: 600;
 }
 .txt{
     width: 85%; 
