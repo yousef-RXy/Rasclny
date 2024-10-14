@@ -8,16 +8,17 @@ import { SingleProductService } from '../../services/single-product.service';
   styleUrls: ['./singl-product.component.css']
 })
 export class SinglProductComponent implements OnInit {
-  product: any | null = '';  // Use null as initial value instead of an empty string
+  product: any | null = '';  
   singleProductData: any;
 
   constructor(
-    private route: ActivatedRoute, 
-    private singleProductService: SingleProductService
+     
+    private singleProductService: SingleProductService,
+    private route: ActivatedRoute
   ) {}
 
   ngOnInit(): void {
-    this.product = this.route.snapshot.paramMap.get('productId');  // Get productId from route params
+    this.product = this.route.snapshot.paramMap.get('productId');  
     console.log('Product from URL:', this.product);
 
     if (this.product) {
