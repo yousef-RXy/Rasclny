@@ -15,6 +15,8 @@ import { HomeTopComponent } from './components/home-top/home-top.component';
 import { AuthComponent } from './pages/auth/auth.component';
 import { FooterComponent } from './component/footer/footer.component';
 import { InfoComponent } from './components/info/info.component';
+import { NavComponent } from './components/nav/nav.component';
+
 
 
 @NgModule({
@@ -30,13 +32,16 @@ import { InfoComponent } from './components/info/info.component';
     ButtonComponent,
     FooterComponent,
     InfoComponent,
+    NavComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-  ],
+
+],
   providers: [],
   bootstrap: [AppComponent],
 })
