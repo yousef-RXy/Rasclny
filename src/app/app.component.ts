@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
-// import {HomeTopComponent} from './component/home-top/home-top.component'
+
+import { Component, OnInit } from '@angular/core';
 import { AuthService } from './services/auth.service';
-import { FooterComponent } from './component/footer/footer.component'
+import { Router, NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-root',
