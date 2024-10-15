@@ -2,7 +2,8 @@
 
 nav{
     margin: 5px;
-  
+
+
     }
     .nav-container
     {
@@ -17,6 +18,23 @@ nav{
     .links{
         width: 30%;
     }
+    .link a{
+        color: #288C36;
+        text-decoration: none;
+        font-size: 1rem;
+    }
+    .active{
+        background-color:#288C36 ;
+         
+        padding: 10px 15px;
+        border-bottom:2px solid #288C36;
+        border-radius: 20px;
+        
+    }
+    .active a{
+        color:white
+    }
+
     
     .link a{
         color: #000000;
@@ -142,6 +160,8 @@ nav{
         position: relative;
         background-color: rgb(255, 255, 255);
         padding: 5px 15px;
+
+
         margin-right: 10px;
     
       }
@@ -166,4 +186,3 @@ nav{
         bottom: 0;
         height: 100%;
       }
-      

@@ -14,9 +14,11 @@ import { InputComponent } from './components/input/input.component';
 import { HomeTopComponent } from './components/home-top/home-top.component';
 import { AuthComponent } from './pages/auth/auth.component';
 import { InfoComponent } from './components/info/info.component';
-import { FooterComponent } from './components/footer/footer.component';
+
 import { NavComponent } from './components/nav/nav.component';
+import { FooterComponent } from './components/footer/footer.component';
 import { HomeBottomComponent } from './components/homebottom/home-bottom.component';
+
 
 @NgModule({
   declarations: [
@@ -30,6 +32,10 @@ import { HomeBottomComponent } from './components/homebottom/home-bottom.compone
     AuthComponent,
     ButtonComponent,
     InfoComponent,
+
+    NavComponent,
+
+
     FooterComponent,
     NavComponent,
     HomeBottomComponent,
@@ -39,7 +45,8 @@ import { HomeBottomComponent } from './components/homebottom/home-bottom.compone
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-  ],
+
+],
   providers: [],
   bootstrap: [AppComponent],
 })

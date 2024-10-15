@@ -6,6 +6,7 @@ import { CategoryComponent } from './pages/category/category.component';
 import { AuthComponent } from './pages/auth/auth.component';
 import { SinglProductComponent } from './pages/singl-product/singl-product.component';
 
+
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },

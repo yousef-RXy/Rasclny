@@ -25,6 +25,18 @@ export class ProductsComponent implements OnInit {
 
         console.log(this.singleCategory?.category.products);
       });
+    
+    this.route.paramMap.subscribe((params) => {
+      this.category = params.get('category');
+      console.log('Category from URL:', this.category);
+
+      if (this.category) {
+        this.singleCategoryData.getData(this.category).subscribe(response => {
+          this.singleCategory = response;
+          console.log(this.singleCategory?.category?.products);
+        });
+      }
     });
-  }
+  })
+}
 }
