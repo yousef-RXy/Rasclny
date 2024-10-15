@@ -13,10 +13,7 @@ import { ButtonComponent } from './components/button/button.component';
 import { InputComponent } from './components/input/input.component';
 import { HomeTopComponent } from './components/home-top/home-top.component';
 import { AuthComponent } from './pages/auth/auth.component';
-import { FooterComponent } from './component/footer/footer.component';
 import { InfoComponent } from './components/info/info.component';
-import { NavComponent } from './components/nav/nav.component';
-
 
 
 @NgModule({
@@ -30,10 +27,9 @@ import { NavComponent } from './components/nav/nav.component';
     HomeTopComponent,
     AuthComponent,
     ButtonComponent,
+    InfoComponent,
     FooterComponent,
     InfoComponent,
-    NavComponent,
-
   ],
   imports: [
     BrowserModule,

@@ -17,6 +17,14 @@ export class ProductsComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    this.route.url.subscribe(url => {
+      console.log(url[1].path);
+      this.category = url[1].path;
+      this.singleCategoryData.getData(this.category).subscribe(response => {
+        this.singleCategory = response;
+
+        console.log(this.singleCategory?.category.products);
+      });
     
     this.route.paramMap.subscribe((params) => {
       this.category = params.get('category');

@@ -1,0 +1,60 @@
+<footer>
+  <div class="footer-container">
+    <!-- First Div -->
+    <div class="footer-section">
+      <h2>Categories</h2>
+      <ul class="arrow-list">
+        <div *ngFor="let category of data?.categories">
+          <li>
+            <p
+              style="cursor: pointer; width: fit-content"
+              (click)="navigateTo(['/products', category?._id])"
+            >
+              {{ category.name }}
+            </p>
+          </li>
+        </div>
+      </ul>
+    </div>
+
+    <!-- Second Div -->
+    <div class="footer-sectionTwo">
+      <h2>Contact Us</h2>
+      <div class="social">
+        <a href="#" target="_blank">
+          <div class="social-circle">
+            <div class="clip-circle facebook"></div>
+            <img
+              src="https://mohameds16.github.io/jfc-consultant/images/icons/facebook.webp"
+              class="facebook-logo"
+            />
+          </div>
+        </a>
+        <a href="#" target="_blank">
+          <div class="social-circle">
+            <div class="clip-circle instagram"></div>
+            <img
+              src="https://mohameds16.github.io/jfc-consultant/images/icons/instagram.webp"
+              class="instagram-logo"
+            />
+          </div>
+        </a>
+        <a href="#" target="_blank">
+          <div class="social-circle">
+            <div class="clip-circle tiktok"></div>
+            <img
+              src="https://www.pngrepo.com/png/303159/512/tiktok-icon-black-1-logo.png"
+              class="tiktok-logo"
+            />
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <!-- Third Div -->
+    <div class="footer-sectionThree">
+      <p><strong>Clean your area</strong></p>
+      <img src="assets/footer.png" alt="Clean your area image" />
+    </div>
+  </div>
+</footer>
