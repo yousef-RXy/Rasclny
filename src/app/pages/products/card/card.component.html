@@ -1,3 +1,4 @@
+<<<<<<< HEAD
  
     <div   *ngFor="let product of singleCategory" >
         <div class="card">
@@ -16,5 +17,26 @@
             <app-button (click)="cartProduct(product._id)" [color]="'white'" [backGroundColor]="'rgba(89, 160, 83, 1)'" [text]="'request'"></app-button>
         </div>
 
+=======
+<div *ngFor="let product of singleCategory">
+  <div [routerLink]="['/singleProduct/', product?._id]" class="card">
+    <div class="ii">
+      <img class="card-img" [src]="product?.image" alt="" />
+      <div [routerLink]="['/singleProduct/', product?._id]" class="info-i">
+        <app-info></app-info>
+      </div>
+>>>>>>> main
     </div>
- 
+
+    <div class="txt">
+      <p class="name">{{ product?.name }}</p>
+      <p class="price">{{ product?.price }} Pound</p>
+    </div>
+    <app-button
+      (click)="onButtonClick($event, product)"
+      [color]="'white'"
+      [backGroundColor]="'rgba(89, 160, 83, 1)'"
+      [text]="'request'"
+    ></app-button>
+  </div>
+</div>
