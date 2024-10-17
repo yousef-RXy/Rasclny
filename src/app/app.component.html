@@ -1,7 +1,5 @@
 <div class="content">
-  <app-nav *ngIf="!currentRoute.startsWith('/auth')" />
-<app-nav />
+  <app-nav class="navv" *ngIf="!currentRoute.startsWith('/auth')" />
   <router-outlet />
   <app-footer *ngIf="!currentRoute.startsWith('/auth')" />
-  <app-footer />
 </div>

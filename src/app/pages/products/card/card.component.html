@@ -1,19 +1,19 @@
  
     <div   *ngFor="let product of singleCategory" >
-        <div [routerLink]="['/singleProduct/',product?._id]" class="card">
+        <div class="card">
             <div class="ii">
-                <img class="card-img" [src]="product?.image" alt="">
+                <img [routerLink]="['/singleProduct/',product?._id]"  class="card-img" [src]="product?.image" alt="">
                 <div [routerLink]="['/singleProduct/',product?._id]"  class="info-i">
                 <app-info ></app-info>
                </div>
             </div>
            
             
-            <div class="txt">
-                <p class="name">{{product?.name}}</p>
-                <p class="price">{{product?.price}} Pound</p>
+            <div [routerLink]="['/singleProduct/',product?._id]"  class="txt">
+                <p [routerLink]="['/singleProduct/',product?._id]"  class="name">{{product?.name}}</p>
+                <p [routerLink]="['/singleProduct/',product?._id]"  class="price">{{product?.price}} Pound</p>
             </div>
-            <app-button [color]="'white'" [backGroundColor]="'rgba(89, 160, 83, 1)'" [text]="'request'"></app-button>
+            <app-button (click)="cartProduct(product._id)" [color]="'white'" [backGroundColor]="'rgba(89, 160, 83, 1)'" [text]="'request'"></app-button>
         </div>
 
     </div>
