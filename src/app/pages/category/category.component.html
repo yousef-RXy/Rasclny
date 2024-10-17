@@ -1,22 +1,19 @@
 <div class="content">
-  <div *ngFor="let category of data?.categories">
-      <ng-container *ngIf="isLoading; else card">
-          <div class="loader"></div>
-      </ng-container>
-      <ng-template #card>
-          <div class="card">
-              <img [src]="category?.imgurl" alt="{{category?.name}}">
-              <div class="txt">
-                  <p class="cat-name">{{category?.name}}</p>
-              </div>
-              <a class="categoryLink" [routerLink]="['/products', category?._id]">
-                  <app-button
-                      [color]="'white'"
-                      [backGroundColor]="'rgba(89, 160, 83, 1)'"
-                      [text]="'more details'"
-                  ></app-button>
-              </a>
-          </div>
-      </ng-template>
-  </div>
+    <div *ngFor="let category of data?.categories">
+        <ng-container *ngIf="isLoading; else card">
+            <div class="loader"></div>
+        </ng-container>
+        <ng-template #card>
+            <div class="card">
+                <img [src]="category?.imgurl" alt="{{category?.name}}">
+                <div class="txt">
+                    <p class="cat-name">{{category?.name}}</p>
+                </div>
+                <a class="categoryLink" [routerLink]="['/products', category?._id]">
+                    <app-button [color]="'white'" [backGroundColor]="'rgba(89, 160, 83, 1)'"
+                        [text]="'more details'"></app-button>
+                </a>
+            </div>
+        </ng-template>
+    </div>
 </div>
