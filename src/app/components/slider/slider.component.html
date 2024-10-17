@@ -1,0 +1,19 @@
+<div *ngFor="let category of data?.categories">
+    <ng-container *ngIf="isLoading; else content">
+    </ng-container>
+    <ng-template #content>
+        <div class="card-container">
+            <div class="card">
+                <div class="front-content">
+                    <p>{{category.name}}</p>
+                </div>
+                <div class="content">
+                    <p class="heading">{{category.name}}</p>
+                    <p>
+                        {{category.descreption}}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </ng-template>
+</div>
