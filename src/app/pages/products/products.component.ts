@@ -17,15 +17,14 @@ export class ProductsComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.category = this.route.snapshot.paramMap.get('category');
-    console.log('Category from URL:', this.category);
+    this.route.url.subscribe(url => {
+      console.log(url[1].path);
+      this.category = url[1].path;
+      this.singleCategoryData.getData(this.category).subscribe(response => {
+        this.singleCategory = response;
 
-    this.singleCategoryData.getData(this.category).subscribe(response => {
-      this.singleCategory = response;
-      
-      console.log(this.singleCategory?.category.products)
+        console.log(this.singleCategory?.category.products);
+      });
     });
-  
-    
   }
 }

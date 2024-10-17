@@ -13,9 +13,10 @@ import { ButtonComponent } from './components/button/button.component';
 import { InputComponent } from './components/input/input.component';
 import { HomeTopComponent } from './components/home-top/home-top.component';
 import { AuthComponent } from './pages/auth/auth.component';
-import { FooterComponent } from './component/footer/footer.component';
 import { InfoComponent } from './components/info/info.component';
-
+import { FooterComponent } from './components/footer/footer.component';
+import { NavComponent } from './components/nav/nav.component';
+import { HomeBottomComponent } from './components/homebottom/home-bottom.component';
 
 @NgModule({
   declarations: [
@@ -28,8 +29,10 @@ import { InfoComponent } from './components/info/info.component';
     HomeTopComponent,
     AuthComponent,
     ButtonComponent,
-    FooterComponent,
     InfoComponent,
+    FooterComponent,
+    NavComponent,
+    HomeBottomComponent,
   ],
   imports: [
     BrowserModule,
