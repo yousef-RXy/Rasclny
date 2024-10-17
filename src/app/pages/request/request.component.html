@@ -1,7 +1,6 @@
-
 <div class="flex-Row">
-    <app-left-request></app-left-request>
-<app-right-request></app-right-request>
-
-</div>    
-
+  <div *ngFor="let CartItem of CartItems">
+    <app-left-request [CartItem]="CartItem"></app-left-request>
+  </div>
+  <app-right-request></app-right-request>
+</div>
