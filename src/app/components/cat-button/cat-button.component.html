@@ -1,11 +1,8 @@
-
-<button 
-  [type]="type"
-  [style.color]="color"
-  [style.background-color]="backGroundColor"
-  [disabled]="disabled"
-  [routerLink]="['/products',categoryLink]"
-  routerLinkActive="activated"
->
-<span>{{text}}</span>
+<button [type]="type" 
+        [style.color]="color" 
+        [style.backgroundColor]="backGroundColor" 
+        [disabled]="disabled" 
+        [routerLink]="['/products', categoryLink]" 
+        routerLinkActive="activated">
+  <span>{{ text }}</span>
 </button>
