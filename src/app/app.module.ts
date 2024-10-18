@@ -34,7 +34,7 @@ import { ProductNavComponent } from './components/product-nav/product-nav.compon
 import { CatButtonComponent } from './components/cat-button/cat-button.component';
 import { SliderComponent } from './components/slider/slider.component';
 
-import { CartComponent } from './components/cart-under edit/cart.component';
+import { CartComponent } from './components/cart/cart.component';
 
 
 

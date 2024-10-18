@@ -1,13 +1,10 @@
-nav {
-    margin: 5px;
-
+nav{
+    width: 100vw;
 
 }
-
 .nav-container {
-    gap: 100px;
     height: 3rem;
-
+    gap: 35px;
 }
 
 .logo {
@@ -24,14 +21,6 @@ nav {
     font-size: 1rem;
 }
 
-.active {
-    background-color: #288C36;
-    color: white;
-    padding: 10px 15px;
-    border-bottom: 2px solid #288C36;
-    border-radius: 20px;
-
-}
 
 
 
@@ -65,9 +54,7 @@ nav {
     width: 100%;
 }
 
-.active a {
-    color: white;
-}
+
 
 .search-box {
     width: fit-content;
@@ -222,10 +209,10 @@ nav {
     position: absolute;
     right: 370px;
     display: block;
-  
-
-
 }
-/* ----------------- */
 
+.active a {
+    color: #288C36;
+    font-weight: 900;
+    }
     

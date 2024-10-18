@@ -1,5 +1,21 @@
-<div class="contaner">
-  <div class="flex-Row">
-    <img [src]="CartItem.product.image" alt="err" />
+<div  [routerLink]="['/singleProduct/', CartItem.product._id]" class="item">
+  <div class="section1">
+    <div class="item-image">
+      <img [src]="CartItem.product.image" alt="{{CartItem.product.name}}" class="product-image">
+    </div>
+    <div class="product-details">
+      <div class="txts">
+        <h2>{{CartItem.product.name}}</h2>
+        <p>Price: ${{CartItem.product.price}}</p>
+      </div>
+      <div class="counter">
+        <button class="btn minus" >−</button>
+        <span class="count">1</span>
+        <button class="btn plus">+</button>
+      </div>
+    </div>
   </div>
+  <button (click)="RemoveItem($event,CartItem.product._id)" class="remove">
+    <img src="../../../assets/close.png" alt="Remove">
+  </button>
 </div>

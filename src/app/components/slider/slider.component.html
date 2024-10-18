@@ -1,4 +1,4 @@
-<div *ngFor="let category of data?.categories">
+<div [routerLink]="['/products', category?._id]" *ngFor="let category of data?.categories">
     <ng-container *ngIf="isLoading; else content">
     </ng-container>
     <ng-template #content>

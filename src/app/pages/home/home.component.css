@@ -1,8 +1,17 @@
-.slider-content{
+.slider-content {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    padding: 100px;
+    padding: 50px; /* Reduce padding for better spacing */
     flex-wrap: wrap;
-    gap: 75px;
-}
+    gap: 20px; /* Reduce gap for better spacing */
+  }
+  
+  @media (max-width: 768px) {
+    .slider-content {
+      flex-direction: column; /* Stack items vertically on mobile */
+      padding: 20px; /* Adjust padding for mobile */
+      gap: 15px; /* Adjust gap for mobile */
+    }
+  }
+  

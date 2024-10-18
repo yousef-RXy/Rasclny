@@ -129,6 +129,7 @@ footer {
 /* Responsive Adjustments */
 @media (max-width: 768px) {
     .footer-container {
+        margin: 50px;
         flex-direction: column; /* Stack sections vertically on small screens */
         align-items: center; /* Center the items */
     }

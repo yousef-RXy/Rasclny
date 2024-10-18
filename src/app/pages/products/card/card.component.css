@@ -1,6 +1,6 @@
 .card {
-    width: 420px;
-    height: 550px;
+    width: 380px;
+    height: 520px;
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -15,8 +15,8 @@
 }
 
 .card-img {
-    width: 380px; 
-    height: 280px; 
+    width: 330px; 
+    height: 230px; 
     object-fit: cover; 
     border-radius: 16px;
     position:relative;
