@@ -13,6 +13,5 @@ export class CardComponent implements OnInit {
   onButtonClick(event: MouseEvent, product: products): void {
     event.stopPropagation();
     this.cart.addToCart(product);
-    console.log(this.cart.getState());
   }
 }

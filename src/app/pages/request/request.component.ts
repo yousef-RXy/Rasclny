@@ -16,6 +16,5 @@ export class RequestComponent implements OnInit {
     this.cart.state$.subscribe(data => {
       this.CartItems = Array.from(data.values());
     });
-    console.log(this.CartItems);
   }
 }

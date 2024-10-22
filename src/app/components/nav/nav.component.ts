@@ -29,7 +29,6 @@ export class NavComponent implements OnInit {
   }
 
   logOut() {
-    console.log('User logged out');
     localStorage.removeItem('token'); // Use the correct key for your token
     location.reload(); // Refreshes the page
   }

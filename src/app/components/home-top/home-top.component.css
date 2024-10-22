@@ -64,19 +64,25 @@
 }
 
 /* Responsive adjustments */
+@media (max-width: 1125px) {
+  .home {
+    margin-right: 0;
+  }
+}
+@media (max-width: 965px) {
+  .home {
+    width: 100%;
+    text-align: center;
+    padding-left: 0;
+    padding: 10px;
+  }
+}
+
 @media (max-width: 768px) {
   .homeone {
     flex-direction: column;
     justify-content: center;
     padding: 20px;
-  }
-
-  .home {
-    width: 100%;
-    text-align: center;
-    padding-left: 0;
-    margin-right: 0;
-    padding: 10px;
   }
 
   .home-header {

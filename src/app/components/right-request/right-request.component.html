@@ -1,30 +1,36 @@
 <div class="info">
-  <form>
-    
-    <div class="group">      
-      <input type="text" required>
+  <form [formGroup]="applyForm">
+    <div class="group">
+      <input id="address" type="text" required formControlName="address" />
       <span class="highlight"></span>
       <span class="bar"></span>
-      <label>Address</label>
+      <label for="address">Address</label>
     </div>
-      
-    <div class="group">      
-      <input type="number" required>
+
+    <div class="group">
+      <input id="number" type="text" required formControlName="number" />
       <span class="highlight"></span>
       <span class="bar"></span>
-      <label>Number</label>
+      <label for="number">Number</label>
     </div>
-    
   </form>
 </div>
 
-    
-
 <div class="delivery">
   <p>Delivery</p>
-  <span>Delivery Date: September 27, 2024</span>
+  <span
+    >Delivery Date:
+    {{ date.toLocaleString('en-US', {
+    day: 'numeric',
+    month: 'short',
+    year: 'numeric',
+  }) }}</span
+  >
 </div>
+<p *ngIf="error !== ''" style="margin-top: 7px; text-align: center; color: red">
+  {{ error }}
+</p>
 <div class="ways">
-  <button>Instant payment</button>
-  <button>Donate money</button>
+  <button (click)="paymentSubmitHandler()">Instant payment</button>
+  <button (click)="donateSubmitHandler()">Donate money</button>
 </div>

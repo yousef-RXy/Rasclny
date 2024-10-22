@@ -14,7 +14,6 @@ export class FooterComponent implements OnInit {
   ngOnInit(): void {
     this.apiService.getData().subscribe(response => {
       this.data = response;
-      console.log(this.data);
     });
   }
 

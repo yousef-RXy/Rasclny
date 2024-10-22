@@ -228,6 +228,11 @@ nav {
   gap: 10px;
 }
 
+@media (max-width: 500px) {
+  .dropdown {
+    right: 3px;
+  }
+}
 @media (min-width: 768px) {
   .nav {
     flex-basis: 20%;

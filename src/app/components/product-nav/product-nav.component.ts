@@ -4,17 +4,15 @@ import { ApiService } from 'src/app/services/api.service';
 @Component({
   selector: 'app-product-nav',
   templateUrl: './product-nav.component.html',
-  styleUrls: ['./product-nav.component.css']
+  styleUrls: ['./product-nav.component.css'],
 })
 export class ProductNavComponent implements OnInit {
   data?: any;
-  url:any;
+  url: any;
   constructor(private apiService: ApiService) {}
   ngOnInit(): void {
     this.apiService.getData().subscribe(response => {
       this.data = response;
-      console.log(this.data)
     });
   }
-
 }

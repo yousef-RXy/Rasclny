@@ -50,7 +50,6 @@ export class AuthComponent implements OnInit {
     this.isFormSubmitted = true;
     this.disabled = true;
     if (this.applyForm.invalid) {
-      console.log(this.disabled);
       this.disabled = false;
       return;
     }

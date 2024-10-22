@@ -1,7 +1,7 @@
-
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from './services/auth.service';
 import { Router, NavigationEnd } from '@angular/router';
+import { CartService } from './services/cart.service';
 
 @Component({
   selector: 'app-root',
@@ -14,7 +14,11 @@ export class AppComponent {
   isAuth = false;
   currentRoute: string = '';
 
-  constructor(private authService: AuthService, private router: Router) {}
+  constructor(
+    private authService: AuthService,
+    private router: Router,
+    private cart: CartService
+  ) {}
 
   ngOnInit() {
     this.router.events.subscribe(event => {
@@ -22,5 +26,6 @@ export class AppComponent {
         this.currentRoute = event.urlAfterRedirects;
       }
     });
+    this.cart.setState();
   }
 }
