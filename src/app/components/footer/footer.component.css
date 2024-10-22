@@ -1,151 +1,154 @@
 /* Footer Styling */
 footer {
-    background-color: #66AD5F;
-    padding: 20px;
-	width: 100%;
+  background-color: #66ad5f;
+  padding: 20px;
+  width: 100%;
 }
 
 .footer-container {
-    display: flex;
-    justify-content: space-between;
-	flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 /* First Div (Categories) */
 .footer-section {
-    flex: 1;
-    margin: 10px 10px; /* Reduced margin to bring divs closer */
-    padding-left: 20px; /* Keep a little padding for alignment */
+  flex: 1;
+  margin: 10px 10px; /* Reduced margin to bring divs closer */
+  padding-left: 20px; /* Keep a little padding for alignment */
 }
 
 .footer-section h2 {
-    line-height: 60px;
-    color: black;
+  line-height: 60px;
+  color: black;
 }
 
 /* Second Div (Social Media) */
 .footer-sectionTwo {
-    flex: 3; /* Smaller flex to allow more space for other sections */
-    margin: 10px 10px; /* Reduced margin for proximity */
+  flex: 3; /* Smaller flex to allow more space for other sections */
+  margin: 10px 10px; /* Reduced margin for proximity */
 }
 
 .footer-sectionTwo h2 {
-    line-height: 60px;
-    color: black;
+  line-height: 60px;
+  color: black;
 }
 
 .arrow-list {
-    list-style: none;
-    padding-left: 20px;
+  list-style: none;
+  padding-left: 20px;
 }
 
 .arrow-list li {
-    position: relative;
-    padding-left: 20px;
-    line-height: 25px;
-    color: black;
+  position: relative;
+  padding-left: 20px;
+  line-height: 25px;
+  color: black;
 }
 
 /* Social Media Icons Section */
 .social {
-	display: flex;
-	gap: 10px;
+  display: flex;
+  gap: 10px;
 }
 
 .facebook-logo,
 .instagram-logo,
 .tiktok-logo {
-	width: 25px;
-	height: 25px;
-	z-index: 2;
+  width: 25px;
+  height: 25px;
+  z-index: 2;
 }
 
-
 .social-circle {
-	width: 50px;
-	height: 50px;
-	border-radius: 100%;
-	background-color: white;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	margin: 0 5px;
-	position: relative;
-	outline: none;
-	border: none;
-	overflow: hidden;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5px;
+  position: relative;
+  outline: none;
+  border: none;
+  overflow: hidden;
 }
 
 .clip-circle {
-	width: 55px;
-	height: 55px;
-	border-radius: 100%;
-	position: absolute;
-	z-index: 1;
-	clip-path: circle(0px at 50% 50%);
-	outline: none;
-	border: none;
-	transition: all 0.5s ease-out;
+  width: 55px;
+  height: 55px;
+  border-radius: 100%;
+  position: absolute;
+  z-index: 1;
+  clip-path: circle(0px at 50% 50%);
+  outline: none;
+  border: none;
+  transition: all 0.5s ease-out;
 }
 
 .facebook {
-	background-color: blue;
+  background-color: blue;
 }
 
 .instagram {
-	background: linear-gradient(to bottom right, deeppink, purple);
+  background: linear-gradient(to bottom right, deeppink, purple);
 }
 
 .tiktok {
-	background: black;
+  background: black;
 }
 
 .social-circle:hover .clip-circle {
-	clip-path: circle(60px at 50% 50%);
-	transition: all 0.7s ease-out;
+  clip-path: circle(60px at 50% 50%);
+  transition: all 0.7s ease-out;
 }
 
 /* Third Div (with Image and Paragraph) */
 
 .footer-sectionThree {
-    flex: 1;
-    margin: 10px 20px;
-    text-align: center; /* Center align the content */
+  flex: 1;
+  margin: 10px 20px;
+  text-align: center; /* Center align the content */
 }
 
 .footer-sectionThree p {
-	padding-right: 15px;
-    font-weight: bold;
-    color: white;
-    margin-bottom: 10px;
+  padding-right: 15px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 10px;
 }
 
 .footer-sectionThree img {
-    max-width: 100%; /* Ensure image scales down on smaller screens */
-    height: 200px; /* Maintain aspect ratio */
+  max-width: 100%; /* Ensure image scales down on smaller screens */
+  height: 200px; /* Maintain aspect ratio */
 }
-
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
-    .footer-container {
-        margin: 50px;
-        flex-direction: column; /* Stack sections vertically on small screens */
-        align-items: center; /* Center the items */
-    }
+  .footer-container {
+    margin: 50px;
+    flex-direction: column; /* Stack sections vertically on small screens */
+    align-items: center; /* Center the items */
+  }
 
-    .footer-section,
-    .footer-sectionTwo,
-    .footer-sectionThree {
-        margin: 10px 0; /* Add more space between stacked sections */
-        text-align: center; /* Center align content for small screens */
-    }
+  .footer-section,
+  .footer-sectionTwo,
+  .footer-sectionThree {
+    margin: 10px 0; /* Add more space between stacked sections */
+    text-align: center; /* Center align content for small screens */
+    padding-left: 0;
+  }
 
-    .footer-sectionThree img {
-        height: 200px; /* Let image scale proportionally */
-    }
+  .footer-sectionThree img {
+    height: 200px; /* Let image scale proportionally */
+  }
+
+  .arrow-list {
+    padding-left: 0;
+  }
 }
-li a{
-    text-decoration: none;
-    color: black;
+li a {
+  text-decoration: none;
+  color: black;
 }

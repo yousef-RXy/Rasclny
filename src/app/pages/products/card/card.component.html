@@ -1,8 +1,8 @@
 <div *ngFor="let product of singleCategory">
-  <div [routerLink]="['/singleProduct/', product?._id]" class="card">
+  <div [routerLink]="['/product/', product?._id]" class="card">
     <div class="ii">
       <img class="card-img" [src]="product?.image" alt="" />
-      <div [routerLink]="['/singleProduct/', product?._id]" class="info-i">
+      <div class="info-i">
         <app-info></app-info>
       </div>
     </div>

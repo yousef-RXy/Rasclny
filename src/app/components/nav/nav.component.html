@@ -1,35 +1,50 @@
 <nav>
-
-  <div class="nav-container flex-Row flex-evenly">
-    <img class="logo" src="../../../assets/image-removebg-preview.png" alt="">
-    <div class="search-box">
+  <div class="nav-container flex-Row flex-around">
+    <img class="logo" src="../../../assets/image-removebg-preview.png" alt="" />
+    <!-- <div class="search-box">
       <button class="btn-search">
-        <img class="search-icon" src="https://img.icons8.com/?size=100&id=XU3XKgdpT0qG&format=png&color=288C36" alt="">
+        <img
+          class="search-icon"
+          src="https://img.icons8.com/?size=100&id=XU3XKgdpT0qG&format=png&color=288C36"
+          alt=""
+        />
       </button>
-      <input type="text" class="input-search" placeholder="Type to Search...">
-    </div>
-    <div class="links flex-evenly">
-      <ul routerLinkActive="active" class="link">
-        <a [routerLink]="'/home'">Home </a>
-      </ul>
-      <ul routerLinkActive="active" class="link">
-        <a [routerLink]="'categories/'">Categories</a>
-      </ul>
-    </div>
-    <div class="nav-logos flex-evenly">
-      <div class="cart">
-        <img [routerLink]="'/request'" src="https://img.icons8.com/?size=100&id=JWjjFaN1ezzm&format=png&color=288C36" alt="cart" class="nav-logo">
-        <app-cart *ngIf="isCartVisible" class="cart-view" />
+      <input type="text" class="input-search" placeholder="Type to Search..." />
+    </div> -->
+    <div class="nav">
+      <div class="flex-evenly">
+        <ul routerLinkActive="active" class="link">
+          <a [routerLink]="'/home'">Home </a>
+        </ul>
+        <ul routerLinkActive="active" [className]="categoryClass">
+          <a [routerLink]="'category/'">Categories</a>
+        </ul>
       </div>
-      <div class="profile" (click)="toggleDropdown()">
-        <img src="https://img.freepik.com/premium-vector/user-profile-icon-flat-style-member-avatar-vector-illustration-isolated-background-human-permission-sign-business-concept_157943-15752.jpg" alt="profile picture">
-        <div *ngIf="isDropdownVisible" class="dropdown">
-          <ul>
-            <li (click)="logOut()">Log out</li>
-          </ul>
+      <div class="flex-evenly">
+        <div class="cart">
+          <img
+            [routerLink]="'/cart'"
+            src="https://img.icons8.com/?size=100&id=JWjjFaN1ezzm&format=png&color=288C36"
+            alt="cart"
+            class="nav-logo"
+          />
+          <app-cart *ngIf="isCartVisible" class="cart-view" />
+        </div>
+        <div class="profile" (click)="toggleDropdown()">
+          <img
+            src="https://img.freepik.com/premium-vector/user-profile-icon-flat-style-member-avatar-vector-illustration-isolated-background-human-permission-sign-business-concept_157943-15752.jpg"
+            alt="profile picture"
+          />
+          <div *ngIf="isDropdownVisible" style="position: relative">
+            <div class="arrow-up"></div>
+          </div>
+          <div *ngIf="isDropdownVisible" class="dropdown">
+            <ul>
+              <li (click)="logOut()">Log out</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
- 
   </div>
 </nav>

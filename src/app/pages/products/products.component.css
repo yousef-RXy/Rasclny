@@ -1,25 +1,25 @@
-.cards{
-  
-    gap: 10px;
+.cards {
+  gap: 10px;
 }
-.content{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 100px;
-    flex-direction: column;
-    gap: 50px;
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 100px 0;
+  flex-direction: column;
+  gap: 50px;
 }
-.CARDSS{
-   display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-evenly;
-    width: 100%;
+.CARDSS {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
 }
-.buttonss{
-    display: flex;
-gap: 10px;
-display: flex;
-flex-wrap: wrap;
+.buttonss {
+  display: flex;
+  gap: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }

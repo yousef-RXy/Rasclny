@@ -8,14 +8,14 @@ import { SinglProductComponent } from './pages/singl-product/singl-product.compo
 import { RequestComponent } from './pages/request/request.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
-  { path: 'products/:category', component: ProductsComponent },
-  { path: 'categories', component: CategoryComponent },
+  { path: 'category/:category', component: ProductsComponent },
+  { path: 'category', component: CategoryComponent },
   { path: 'auth', component: AuthComponent },
   { path: 'auth/:mode', component: AuthComponent },
-  { path: 'singleProduct/:productId', component: SinglProductComponent },
-  { path: 'request', component: RequestComponent },
+  { path: 'product/:productId', component: SinglProductComponent },
+  { path: 'cart', component: RequestComponent },
+  { path: '**', redirectTo: '/home' },
 ];
 
 @NgModule({
